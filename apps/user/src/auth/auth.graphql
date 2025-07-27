@@ -13,7 +13,6 @@ input UpdateAuthInput {
 }
 
 type Query {
-  auth: [Auth]!
   auth(id: Int!): Auth
 }
 

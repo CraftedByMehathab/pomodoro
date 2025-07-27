@@ -9,10 +9,11 @@ export class UserResolver {
 
   @Mutation('createUser')
   create(@Args('createUserInput') createUserInput: CreateUserInput) {
-    return this.userService.create(createUserInput);
+    const user = this.userService.create(createUserInput);
+    return user;
   }
 
-  @Query('user')
+  @Query('users')
   findAll() {
     return this.userService.findAll();
   }

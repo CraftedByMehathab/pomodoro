@@ -13,11 +13,6 @@ export class AuthResolver {
   }
 
   @Query('auth')
-  findAll() {
-    return this.authService.findAll();
-  }
-
-  @Query('auth')
   findOne(@Args('id') id: number) {
     return this.authService.findOne(id);
   }
